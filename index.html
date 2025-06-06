@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHome - Sistema de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="img/logo.png" alt="TechHome Logo">
+                <h1>Tech<span>Home</span></h1>
+            </div>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Administrador</span>
+                <i class="fas fa-cog"></i>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
+                    <li><a href="#"><i class="fas fa-box-open"></i> Productos</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Clientes</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Reportes</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Panel de Ventas</h2>
+                <div class="breadcrumb">
+                    <span>Inicio</span> / <span>Ventas</span>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-container">
+                <div class="stat-card blue">
+                    <div class="stat-info">
+                        <h3>Ventas Hoy</h3>
+                        <p>$12,450.00</p>
+                    </div>
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-info">
+                        <h3>Productos Vendidos</h3>
+                        <p>48</p>
+                    </div>
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="stat-card orange">
+                    <div class="stat-info">
+                        <h3>Clientes Nuevos</h3>
+                        <p>7</p>
+                    </div>
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-info">
+                        <h3>Inventario</h3>
+                        <p>215</p>
+                    </div>
+                    <i class="fas fa-boxes"></i>
+                </div>
+            </div>
+
+            <!-- Sales Form -->
+            <div class="sales-form">
+                <div class="product-search">
+                    <h3>Agregar Productos</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar producto...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="product-list">
+                        <!-- Product items will be added dynamically -->
+                    </div>
+                </div>
+                <div class="sale-summary">
+                    <h3>Resumen de Venta</h3>
+                    <div class="cart-items">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Subtotal</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Cart items will be added dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="total-section">
+                        <div class="totals">
+                            <div class="subtotal">
+                                <span>Subtotal:</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="tax">
+                                <span>IVA (16%):</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="total">
+                                <span>Total:</span>
+                                <span>$0.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-checkout">Finalizar Venta</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Sales -->
+            <div class="recent-sales">
+                <h3>Ventas Recientes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Venta</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Productos</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#00045</td>
+                            <td>05/06/2023</td>
+                            <td>Juan Pérez</td>
+                            <td>3</td>
+                            <td>$8,750.00</td>
+                            <td><span class="status completed">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td>#00044</td>
+                            <td>05/06/2023</td>
+                            <td>María García</td>
+                            <td>2</td>
+                            <td>$5,200.00</td>
+                            <td><span class="status completed">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td>#00043</td>
+                            <td>04/06/2023</td>
+                            <td>Carlos López</td>
+                            <td>1</td>
+                            <td>$3,500.00</td>
+                            <td><span class="status pending">Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
